@@ -19,6 +19,7 @@ struct vnode;
 struct lookup;
 struct worker_thread;
 struct job;
+struct notify;
 
 /* comm.c */
 int drv_sendrec(endpoint_t drv_e, message *reqm);

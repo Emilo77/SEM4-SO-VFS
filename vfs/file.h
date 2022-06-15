@@ -32,6 +32,13 @@ EXTERN struct filp {
   dev_t filp_char_select_dev;
 } filp[NR_FILPS];
 
+EXTERN struct notify {
+	endpoint_t caller;
+	struct filp *used_filp;
+	int in_use;
+	int event;
+} notify[NR_NOTIFY];
+
 #define FILP_CLOSED	0	/* filp_mode: associated device closed/gone */
 
 #define FSF_UPDATE	001	/* The driver should be informed about new
